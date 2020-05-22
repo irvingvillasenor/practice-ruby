@@ -1,38 +1,22 @@
-# Write your solution below
+puts "This is what the data looks like with a `puts` statement"
+puts "Example 1: "
+puts ["1", "2", "3", "4", "5"]
 
-class Employee
-  attr_reader :first_name, :last_name, :salary, :active, :email
-  attr_writer :first_name, :last_name, :salary, :active, :email
+puts ""
 
-  def initialize(input_options)
-    @first_name = input_options[:first_name]
-    @last_name = input_options[:last_name]
-    @salary = input_options[:salary] ||= 45000
-    @active = input_options[:active] ||= false
-    @email = input_options[:email] ||= "#{@first_name}#{@last_name}@gmail.com"
-  end
-
-  def print_info
-    puts "#{@first_name} #{@last_name} makes #{@salary} a year."
-  end
-
-  def give_annual_raise
-    @salary = 1.05 * @salary
-  end
-
-  def full_name
-    if @last_name.end_with?("s")
-      puts "#{@first_name} #{@last_name}, Esquire"
-    else
-      puts "#{@first_name} #{@last_name}"
-    end
-  end
-
+puts "Example 2: "
+[1, 2, 3, 4, 5].each do |number|
+  puts number
 end
 
-employee1 = Employee.new({first_name: "Majora", last_name: "Carter", active: true})
-employee2 = Employee.new(first_name: "Danilo", last_name: "Campos", salary: 70000, active: true)
-employee1.print_info
-employee2.print_info
-employee1.full_name
-employee2.full_name
+puts ""
+
+puts "Can you tell the difference between the two examples above from the terminal?"
+puts ""
+
+puts "This is what the data looks like with a `p` statement"
+p ["1", "2", "3", "4", "5"]
+
+puts ""
+
+puts "Which one above tells you that this is an array of strings? p or puts?"
